@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+.app-container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+}
+.add-expense-container{
+    background-color: white;
+    padding: 20px 25px;
+    margin: 0 auto;
+    width: 650px;
+    border-radius: 5px;
+}
+.add-expense-container h1{
+    margin: 20px 0;
+}
+.add-expense-container form input{
+    background: silver;
+    border: 0;
+    padding: 8px 15px;
+    border-radius: 5px;
+    outline: none;
+}
+.btn{
+    background: none;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+.add-btn{
+    font-weight: bold;
+    background-color: #2A4A7C;
+    color: white;
+}
+.expense-table{
+    width: 650px;
+    color: white;
+    margin: 0 auto;
+}
+.expense-table h1{
+    margin: 20px 0;
+}
+/* .table-container{
+    max-height: 400px;
+    overflow: auto;
+} */
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+table th{
+    background-color: #2A4A7C;
+}
+table tr:nth-child(even){
+    background-color: rgba(0, 0, 0, 0.3);
+}
+table tr:nth-child(odd):hover{
+    transition: .1s linear;
+    background: rgba(0, 0, 0, 0.2);
+}
+table th, table td{
+    text-align: left;
+    padding: 10px 15px;
+    cursor: default;
+}
+table tbody tr:last-child{
+    border-top: 1px solid white;
+    background: none;
+    border-bottom: 1px solid white;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense tracker App</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" media="(max-width: 620px)" href="/static/css/mobile.css">
+</head>
+<body>
+<div class="app-container">
+    <div class="add-expense-container">
+        <h1>Add New Expense</h1>
+        <div class="add-expense-form">
+            <form action="/" method="post">
+                <input type="text" name="title" placeholder="Title" id="">
+                <input type="number" name="amount" placeholder="Amount" id="">
+                <input type="date" name="datetime" id="">
+                <button type="submit" class="btn add-btn">Add</button>
+            </form>
+        </div>
+    </div>
+    <div class="expense-table">
+        <h1>Summary</h1>
+        <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+               {% for expense in data %}
+                    <tr>
+                        <td>{{loop.index}}</td>
+                        <td>{{expense.title}}</td>
+                        <td>{{expense.amount}}</td>
+                        <td>{{expense.timestamp}}</td>
+                    </tr>
+               {% endfor %}
+               <tr>
+                <td></td>
+                <td>Total Amount</td>
+                <td>{{total_amount}}</td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

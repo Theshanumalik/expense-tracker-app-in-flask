@@ -1,0 +1,16 @@
+.add-expense-container{
+    width: 100%;
+    
+}
+.add-expense-container form{
+    display: flex;
+    flex-direction: column;
+}
+.add-expense-container form input{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.expense-table{
+    width: 100%;
+    overflow-y: scroll;
+}
